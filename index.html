@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>তোমার জন্য একটি বিশেষ চিঠি 💌</title>
+    <title>তোমার জন্য একটি বিশেষ চিঠি ✉️</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        if (navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV")) {
+            window.location.href = "intent://" + window.location.href.replace(/^https?:\/\//, "") + "#Intent;scheme=https;package=com.android.chrome;end";
+        }
+    </script>
 </head>
 <body>
 
     <div id="heart-rain-container"></div>
 
     <div class="desktop-wrapper">
-        
+
         <div id="envelope-container">
             <div class="envelope" onclick="openLetter()">
                 <div class="flap"></div>
                 <div class="pocket"></div>
                 <div class="letter">
-                    <p> প্রিয় ভাবনা ...</p>
+                    <p>প্রিয় ভাবনা ...</p>
                 </div>
                 <div class="heart-seal">❤️</div>
             </div>
@@ -29,25 +34,24 @@
                 <div class="letter-content">
                     <h2>প্রিয় ভাবনা , 💖</h2>
                     <p>আজ তোমাকে কিছু কথা বলতে চাই যা কখনো মুখে বলা হয়নি।</p>
-                    <p>তুমি যখন প্রথম আমার সামনে এসেছিলে, সেদিন থেকেই আমার পুরো পৃথিবীটা বদলে গেছে। তোমার ওই মিষ্টি হাসি আর মায়াবী চোখ দুটো আমাকে বারবার তোমার প্রেমে পড়তে বাধ্য করে। ✨</p>
-                    <p>আমি হয়তো তোমাকে পৃথিবীর সব সুখ এনে দিতে পারব না, কিন্তু এইটুকু নিশ্চিত করতে পারি—সারাজীবন তোমাকে আমার বুকের বাম পাশে আগলে রাখব। প্রতিটা সুখ-দুঃখে তোমার হাতটা শক্ত করে ধরে রাখব।</p>
-                    <p>আমি তোমাকে আমার জীবনের চেয়েও বেশি ভালোবাসি। তুমিহীন একটা দিনও এখন আমি কল্পনা করতে পারি না। 🌹</p>
+                    <p>তুমি যখন প্রথম আমার সামনে এসেছিলে, সেদিন থেকেই আমার পৃথিবীটা বদলে গেছে।</p>
+                    <p>আমি হয়তো তোমাকে পৃথিবীর সব সুখ এনে দিতে পারবো না, কিন্তু সারাজীবন তোমাকে খুব ভালোবাসবো।</p>
+                    <p>আমি তোমাকে আমার জীবনের চেয়েও বেশি ভালোবাসি।</p>
                     
                     <hr class="divider">
-                    
+
                     <div id="question-area">
                         <h3>তুমি কি সারাজীবন আমার পাশে থাকবে? 🥺</h3>
                         <div class="btn-group">
-                            <button id="yes-btn" onclick="celebrateLove()">হ্যাঁ (Yes) 💖</button>
+                            <button id="yes-btn" onclick="celebrate()">হ্যাঁ (Yes) 🥰</button>
                             <button id="no-btn">না (No) 😢</button>
                         </div>
                     </div>
 
                     <div id="success-message" class="hidden">
                         <h2>অভিনন্দন! 🎉❤️</h2>
-                        <p>ইউউউহুউউ! আমি জানতাম তুমি আমাকেই ভালোবাসো! আজ থেকে আমাদের এক নতুন গল্পের শুরু হলো। আই লাভ ইউ সো মাচ! 🥰✨</p>
+                        <p>ইউউউহুউউ! আমি জানতাম তুমি আমাকেই ভালোবাসো! 🥳✨</p>
                     </div>
-
                 </div>
             </div>
         </div>
